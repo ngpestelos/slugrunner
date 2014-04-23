@@ -1,8 +1,7 @@
 FROM progrium/cedarish
 MAINTAINER Jonathan Rudenberg <jonathan@titanous.com>
 
-ADD ./runner/ /runner
-ADD ./build/sdutil /bin/sdutil
+ADD ./runner /runner
 ENTRYPOINT ["/runner/init"]
 
 # add default port to expose (can be overridden)
