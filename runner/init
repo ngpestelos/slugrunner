@@ -1,6 +1,9 @@
 #!/bin/bash
 set -eo pipefail
 
+# this is necessary for running forked processes
+chmod -R 777 /tmp
+
 ## Load slug from Bind Mount, URL or STDIN
 
 export HOME=/app
