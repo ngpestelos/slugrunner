@@ -1,6 +1,9 @@
 #!/bin/bash
 set -eo pipefail
 
+# HACK: give daemon user RW access to /tmp
+usermod -aG root daemon
+
 ## Load slug from Bind Mount, URL or STDIN
 
 export HOME=/app
